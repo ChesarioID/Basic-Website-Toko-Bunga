@@ -1,0 +1,563 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  border: none;
+  text-decoration: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  list-style: none;
+  text-transform: capitalize;
+}
+
+:root {
+  --bg-color: #fff;
+  --text-color: #010101;
+  --main-color: #ff4191;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 4300px;
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+section {
+  padding: 1.4rem 7%;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  border-radius: 5rem;
+  background: black;
+  color: #fff;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.btn:hover {
+  background: pink;
+}
+
+/* Header Start */
+header {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.8);
+  border-bottom: 2px solid var(--main-color);
+  padding: 1.4rem 7%;
+  transition: all 0.5s ease;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+}
+
+.logo span {
+  display: inline-flex;
+  color: var(--text-color);
+  font-size: 2rem;
+  font-family: "Playwrite AU SA", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+.logo span span {
+  color: var(--main-color);
+}
+
+.logo img {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+}
+
+.navbar {
+  display: flex;
+}
+.navbar a {
+  color: var(--text-color);
+  font-size: 1.3rem;
+  display: inline-block;
+  margin: 0 1rem;
+  transition: all 0.5s ease;
+}
+
+.navbar a:hover {
+  color: var(--main-color);
+}
+
+.navbar a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid #ff4191;
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar a:hover::after {
+  transform: scaleX(0.8);
+}
+
+.main a {
+  color: var(--text-color);
+}
+
+.main a:hover {
+  color: var(--main-color);
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+/* Header End */
+
+/* Home Section Start */
+.home {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  background: url(../img/homee.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.home .content {
+  max-width: 50rem;
+}
+
+.home .content h3 {
+  font-size: 6rem;
+  color: black;
+}
+.home .content span {
+  font-size: 3.5rem;
+  color: #f19ed2;
+  padding: 1rem 0;
+  line-height: 1;
+}
+.home .content p {
+  font-size: 1.4rem;
+  color: #999;
+  padding: 1rem 0;
+  line-height: 1;
+}
+/* Home Section End */
+
+/* About Section Start */
+.about {
+  padding: 8.5rem 7% 1.4rem;
+}
+
+.about h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 3rem;
+}
+
+.about h2 span,
+.produk h2,
+.kontak h2 span {
+  color: var(--main-color);
+}
+
+.about .row {
+  display: flex;
+}
+
+.about .row .about-img {
+  flex: 1 1 45rem;
+}
+
+.about .row .about-img img {
+  width: 100%;
+}
+
+.about .row .content {
+  flex: 1 1 35rem;
+  padding: 0 1rem;
+}
+
+.about .row .content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.about .row .content p {
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+  font-weight: 100;
+  line-height: 1.6;
+}
+
+.about .row .content p span {
+  color: var(--main-color);
+}
+/* About Section End */
+
+/* Produk Section Start */
+.produk {
+  padding: 8.5rem 7% 1.4rem;
+}
+
+.produk h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 3rem;
+}
+
+.new-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.row {
+  position: relative;
+  cursor: pointer;
+}
+
+.row img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.produk .product-card {
+  text-align: center;
+  border: 1px solid #ff4191;
+  padding: 2rem;
+}
+
+.row h4 {
+  font-size: 14px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  font-weight: 400;
+  transition: all 0.5s ease;
+}
+
+.row h5 {
+  color: var(--text-color);
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.top {
+  position: absolute;
+  top: 2.5rem;
+  left: 2rem;
+  height: 30px;
+  width: 60px;
+  color: var(--bg-color);
+  background: var(--main-color);
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.row .button a {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  padding: 13px;
+  background: #b09774;
+  color: var(--bg-color);
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  border-radius: 5rem;
+  background: black;
+  color: #fff;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.row .button a:hover {
+  background: var(--main-color);
+}
+/* Produk Section End */
+
+/* Kontak Section Start */
+.kontak {
+  padding: 8.5rem 7% 1.4rem;
+}
+
+.kontak h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 3rem;
+}
+
+.kontak .row {
+  display: flex;
+  margin-top: 2rem;
+  background-color: #d3d3d3;
+}
+
+.kontak .row .map {
+  flex: 1 1 45rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.kontak .row form {
+  flex: 1 1 45rem;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.kontak .row form .input-grup {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  background-color: #d3d3d3;
+  border: 2px solid #010101;
+  padding-left: 2rem;
+}
+
+.kontak .row form .input-grup input {
+  width: 100%;
+  padding: 2rem;
+  font-size: 1.7rem;
+  background: none;
+  color: #010101;
+}
+
+.kontak .row form .bbtn {
+  margin-top: 3rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.7rem;
+  color: #fff;
+  background-color: #b09774;
+  cursor: pointer;
+}
+
+.kontak .row form .bbtn:hover {
+  background: var(--main-color);
+}
+/* Kontak section End */
+
+/* Footer */
+footer {
+  background: url(../img/Footer.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 3rem;
+}
+
+footer .nama-nim {
+  padding: 1rem 0;
+  color: #ffffff;
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: 100;
+  font-family: sans-serif;
+}
+
+footer .nama-nim:hover {
+  color: gold;
+}
+
+footer .credit {
+  font-size: 0.8rem;
+}
+
+footer .credit p {
+  color: #ffffff;
+}
+
+footer .credit p a {
+  color: #10008b;
+}
+
+footer .credit p:hover {
+  color: gold;
+}
+
+/* Media queries */
+
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+/* tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  .navbar {
+    position: absolute;
+    display: block;
+    top: 100%;
+    right: -100%;
+    background-color: var(--bg-color);
+    width: 20rem;
+    height: 50vh;
+    transition: 0.3s;
+  }
+
+  .navbar.active {
+    right: 0;
+  }
+
+  .navbar a {
+    color: var(--text-color);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .navbar a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar a:hover::after {
+    transform: scaleX(0.2);
+  }
+
+  .logo img {
+    height: 50px;
+    width: 50px;
+    border-radius: 25%;
+  }
+
+  .about .row {
+    flex-wrap: wrap;
+  }
+
+  .about .row .about-img img {
+    height: 24rem;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .about .row .content {
+    padding: 0;
+  }
+
+  .about .row .content h3 {
+    margin-top: 1rem;
+    font-size: 2rem;
+  }
+
+  .about .row .content p {
+    font-size: 1.6rem;
+  }
+
+  .about {
+    padding: 14rem 7% 1.4rem;
+  }
+  .produk {
+    padding: 14rem 7% 1.4rem;
+  }
+
+  .new-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  .kontak {
+    padding: 14rem 7% 1.4rem;
+  }
+
+  .kontak .row {
+    flex-wrap: wrap;
+  }
+
+  .kontak .row .map {
+    height: 30rem;
+  }
+
+  .kontak .row form {
+    padding-top: 0;
+  }
+}
+/* HP */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+
+  body {
+    min-height: 3500px;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  .navbar {
+    position: absolute;
+    display: block;
+    top: 100%;
+    right: -100%;
+    background-color: var(--bg-color);
+    width: 20rem;
+    height: 30vh;
+    transition: 0.3s;
+  }
+
+  .navbar.active {
+    right: 0;
+  }
+
+  .navbar a {
+    color: var(--text-color);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .navbar a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar a:hover::after {
+    transform: scaleX(0.2);
+  }
+}
